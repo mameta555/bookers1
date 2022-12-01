@@ -24,6 +24,10 @@
   </div>
 
   <div>
-    <%= f.submit "Create book" %>
+    <% if book.id == nil %>
+      <%= f.submit "Create Book" %>
+    <% else %>
+      <%= f.submit"Update Book" %>
+    <% end %>
   </div>
 <% end %>
